@@ -1,0 +1,305 @@
+/* Reset default margins, paddings, and box model */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Body setup */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f6f2;
+      color: #333;
+    }
+
+    /* ===== Header & Navigation ===== */
+    header {
+      background: #00747C;	
+      color: #fff;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Luckiest Guy';
+      color: #1E2A38;
+    }
+    
+    h2 {
+      font-family: 'Poppins Bold';
+      color:#1E2A38;
+    }
+    h3 { 
+      font-family: 'Montserrat SemiBold';
+      color: #FF6B6B;
+
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #1E2A38;
+    }
+
+    #cart-link {
+      background:#FFA07A;
+      padding: 0.4rem 0.8rem;
+      border-radius: 16px;
+      font-weight: bold;
+    }
+
+    /* ===== Section Styling ===== */
+    .section {
+      display: none;
+      padding: 2rem;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* ===== Product Carousel ===== */
+    .product-container {
+      position: relative;
+      margin: 2rem 0;
+      animation: popIn 0.5s ease;
+      transition:.3s, transform 0.3s;
+      overflow-x: hidden;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: nowrap; /* <-- WAJIB agar horizontal */
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 1rem;
+      padding: 1rem;
+      width: 100%;
+    }
+
+    .product-card {
+      flex: 0 0 260px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: justify;
+      scroll-snap-align: start;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      animation: popIn 0.5s ease;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1rem;
+      animation: popIn 0.5s ease;
+    }
+
+    .scroll-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+      border-radius: 4px;
+    }
+
+    .scroll-left {
+      left: 0.5rem;
+    }
+
+    .scroll-right {
+      right: 0.5rem;
+    }
+
+    /* ===== Product Detail ===== */
+    #product-detail div {
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    #product-detail p {
+      margin-bottom: 1rem;
+    }
+
+    /* Sembunyikan deskripsi produk secara default, akan ditampilkan saat tombol 'Lihat Detail' diklik */
+    .deskripsi-produk {
+      display: none;
+    }
+
+    /* ===== Buttons ===== */
+    button {
+      background: 	#FFA07A;
+      color: #Fff;
+      border: 2px solid #00747C;
+      padding: 0.5rem 1.0rem;
+      border-radius: 18px;
+      font-weight: bold;
+      transition: 0.3s, transform 0.3s;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #fff;
+      color:#FFA07A;
+      transform: scale(1.05);
+    }
+
+    /* ===== Cart Items ===== */
+    .cart-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      animation: popIn 0.5s ease;
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    .cart-total {
+      font-weight: bold;
+      text-align: right;
+      margin-top: 1rem;
+    }
+
+    /* ===== Notification ===== */
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #FFA07A;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      display: none;
+      z-index: 1000;
+    }
+
+    /* ========== GAYA FORM KONTAK ========== */
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      max-width: 500px;
+      margin: auto;
+    }
+
+    /* Grup form: label + input/textarea */
+    .form-group {
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Label field */
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    /* Input dan textarea */
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    /* Efek fokus input */
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #FFA07A;
+    }
+
+    /* Tombol kirim */
+    .btn {
+      padding: 10px 16px;
+      background-color: #FFA07A;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #fff;
+    }
+
+    /* Status kirim */
+    #status-kirim {
+      color: #FFA07A;
+      font-weight: bold;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #00C4CC;
+      color: #fff;
+      text-align: center; 
+      padding: 1rem;
+      font-family: 'Verdana';
+    }
+
+    @media (max-width: 600px){
+      .produk-container {flex-direction: column; align-items: center,}
+      main { padding: 10px 0 70px 0;} 
+      .produk, .detail-produk {width: 95%;}
+      form {width: 100%}
+      .search-bar input[type="text"]
+      {width: 95vw;}
+      .bottom-nav i {font-size: 20px}
+      .modal-content {padding: 14px;}
+      #keranjangContainer > table {min-width: 0; width: 100%}
+    }
+   

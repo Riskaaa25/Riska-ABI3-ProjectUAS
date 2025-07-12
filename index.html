@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEVIRA FISH</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Notification -->
+    <div class="notification" id="notification">
+      Produk berhasil ditambahkan ke keranjang!
+    </div>
+
+    <!-- Header -->
+    <header>
+      <div class="logo">
+      <a href="index.html"><img src="LOGOO.png" alt="Company Logo"></a>
+      </div>
+      <h1>DEVIRA FISH 🐠</h1>
+      <nav>
+        <a href="#" data-section="home">Beranda</a>
+        <a href="#" data-section="products">Produk</a>
+        <a id="cart-link" href="#" data-section="cart-section">
+          Keranjang (<span id="cart-count">0</span>)
+        </a>
+        <a href="#" data-section="contact">Kontak</a>
+      </nav>
+    </header>
+
+    <!-- Sections -->
+    <section id="home" class="section active">
+      <h2>Selamat datang di Toko Devira Fish</h2>
+      <p>☝️🔍 Gunakan navigasi di atas untuk menjelajahi koleksi ikan kami!</p>
+    </section>
+
+    <section id="products" class="section">
+      <h2>Daftar Produk</h2>
+      <div class="product-container">
+        <button class="scroll-arrow scroll-left" data-scroll="-1">&#10094;</button>
+        <div id="product-grid" class="product-grid">
+      <div class="product-card">
+        <img src="images/Product 1.png" alt="Ikan Neon Tetra" />
+        <h3>Ikan Neon Tetra</h3>
+        <p><strong>Rp 2.500 / ekor</strong></p>
+        <p>
+          Ikan mungil dengan warna biru terang dan aksen merah mencolok. Aktif, damai, dan mudah dipelihara — ideal untuk akuarium komunitas.
+        </p>
+
+      <!-- Deskripsi lengkap (disembunyikan, akan ditampilkan saat klik "Lihat Detail") -->
+      <div id="deskripsi-neon-tetra" class="deskripsi-produk">
+        <p><strong>Deskripsi Detail:</strong><br>
+         Hadirkan keindahan bawah air ke rumah Anda dengan koleksi "Ikan Neon Tetra" dari kami! Ikan kecil ikonik ini adalah pilihan sempurna untuk mempercantik akuarium komunitas Anda dengan warna-warni cerah dan perilaku berenang bergerombol yang memukau. Kehadirannya akan menambah dinamika dan keceriaan di setiap sudut akuarium Anda.</p>
+        
+        <p><strong>Detail Spesifikasi & Ciri Khas Unggulan:</strong></p>
+        
+        <p><strong>Ukuran Ideal untuk Akuarium Komunitas:</strong></br>
+         Stok yang kami tawarkan umumnya berukuran ± 2 cm hingga 3.5 cm (dewasa). Ini adalah ukuran yang sangat ideal untuk adaptasi mudah ke lingkungan baru dan memungkinkan Anda memelihara dalam jumlah gerombolan yang cukup. Ukuran maksimal sekitar 4 cm.</p>
+        
+        <p><strong>Gradasi Warna Neon yang Memukau</strong><br>
+        <ul>
+          <li><strong>Garis Biru Neon Cerah:</strong>Garis Biru Neon Cerah: Ciri khas utama adalah garis biru neon elektrik yang membentang horisontal di sepanjang sisi tubuh, berkilau di bawah pencahayaan akuarium.</li>
+          <li><strong>Aksen Merah Menyala:</strong> Di bawah garis biru, terdapat garis merah cerah yang memanjang dari tengah tubuh hingga pangkal ekor, memberikan kontras dinamis.</li>
+        </ul></p>
+         
+        <p><strong>Temperamen Tenang & Perilaku Schooling Mempesona</strong><br>
+         Ikan Neon Tetra dikenal sangat damai dan tidak agresif, cocok untuk akuarium komunitas. Nikmati tontonan saat mereka berenang bersama dalam formasi gerombolan yang rapat (schooling), tampilan alami yang indah dan menenangkan.</p>
+
+        <p><strong>Perawatan Mudah, Cocok untuk Segala Level Hobiis</strong><br>
+         Ikan ini cukup toleran terhadap berbagai kondisi air, cocok bagi pemula sekalipun. Jaga kualitas air tetap bersih dan stabil.</p>
+         Parameter Air Ideal: pH 5.5 - 7.5 dan suhu air 20-26°C.</p>
+        
+        <p><strong>Ideal untuk Lingkungan Akuarium Berstruktur</strong><br>
+         Neon Tetra akan merasa lebih tenang dan nyaman di akuarium yang memiliki banyak elemen seperti tanaman air, akar kayu, atau bebatuan sebagai tempat bersembunyi. Pencahayaan yang redup hingga sedang akan semakin memperkuat tampilan warna neon mereka.</p>
+
+        <p><strong>Pakan Fleksibel</strong><br>
+         Ikan ini bersifat omnivora dan tidak pilih-pilih makanan. Mereka dengan mudah menerima pelet atau flake berukuran kecil yang berkualitas. Untuk hasil terbaik, sesekali beri juga pakan hidup atau beku sebagai variasi nutrisi dan untuk memperkuat warna tubuhnya.</p>
+
+        <p><strong>Sempurna Untuk:</strong><br>
+         - Menambah kecerahan dan dinamika di akuarium komunitas<br>
+         - Aquascape dengan ikan kecil yang menarik<br>
+         - Hobiis dari semua tingkat keahlian</p>
+
+        <p><em>Jangan lewatkan kilau permata mungil ini untuk mempercantik akuarium Anda!</em></p>
+      </div>
+
+      <div class="btn-group">
+        <button onclick="addToCart(1, 'Ikan Neon Tetra', 2500)">Tambah ke Keranjang</button>
+        <button onclick="showProductDetail('Ikan Neon Tetra', document.getElementById('deskripsi-neon-tetra').innerHTML, 2500,)">Lihat Detail</button>
+      </div>
+    </div>
+
+      <div class="product-card">
+        <img src="images/Product 2.png" alt="Produk 2" />
+        <h3>Ikan Gurame Padang</h3>
+        <p><strong>Rp 35.000 / ekor</strong></p>
+        <p>Ikan cantik, warna putih-merah memukau. Ukuran ideal, mudah dirawat, damai untuk akuarium.</p>
+
+      <!-- Deskripsi lengkap (disembunyikan, akan ditampilkan saat klik "Lihat Detail") -->
+      <div id="deskripsi-gurame-padang" class="deskripsi-produk">
+        <p><strong>Deskripsi Detail:</strong><br>
+         Hadirkan sentuhan elegan dan warna menawan ke dalam akuarium Anda dengan Ikan Gurame Padang dari koleksi kami! Spesies cantik ini memikat dengan gradasi warna cerah, gerakan berenang yang tenang, serta sifatnya yang jinak dan bersahabat. Tidak hanya indah, ikan ini juga sangat mudah dipelihara dan cocok untuk hobiis di semua level.</p>
+
+        <p><strong>Detail Spesifikasi & Ciri Khas Unggulan:</strong></p>
+          
+        <p><strong>Ukuran Ideal untuk Akuarium Komunitas</strong></br>
+          Stok tersedia dengan panjang ±8 hingga 15 cm. Ukuran ini memungkinkan adaptasi yang baik ke lingkungan baru dan memberikan ruang tumbuh optimal. Dengan perawatan yang tepat, Gurame Pasang dapat tumbuh hingga 20–25 cm atau lebih, menjadikannya ikan pusat yang menawan dan tahan lama.</p>
+        <p><strong>Gradasi Warna Unik dan Memukau:</strong><br>
+        <ul>
+           <li><strong>Warna Dasar Cerah & Lembut:</strong>Tubuh didominasi warna putih keperakan hingga krem pastel yang elegan dan tenang.</li>
+           <li><strong>Aksen Merah-Oranye Cerah:</strong> Kepala dan sirip dihiasi gradasi merah muda hingga oranye terang, bahkan merah tua pada beberapa individu. Warna ini memberi kesan hangat dan dinamis yang kontras dengan dasar tubuh yang terang.</li>
+           <li><strong>Detail Sirip:</strong>Siripnya transparan dengan semburat merah-oranye, sementara sirip perut memanjang seperti benang berwarna putih kekuningan — ciri khas unik keluarga gourami.</li></p>
+        
+        <p><strong>Bentuk Tubuh Proporsional dan Gerakan Anggun</strong></br>
+          Bentuk tubuh oval gepeng dari samping membuat ikan ini bergerak pelan dan lembut di dalam air, menciptakan efek visual yang tenang namun elegan di akuarium Anda.
+       
+        <p><strong>Temperamen Damai dan Kompatibel</strong><br>
+          Gurame Padang dikenal sangat jinak dan cocok untuk akuarium komunitas yang tenang. Mereka mudah hidup berdampingan dengan ikan lain yang tidak agresif dan berukuran sepadan.</p>
+
+        <p><strong> Perawatan Mudah, Cocok untuk Semua Kalangan</strong><br>
+          Ikan ini sangat toleran terhadap berbagai kondisi air. Ideal untuk pemula maupun penghobi berpengalaman.</p>
+          Parameter Ideal: pH 6.0 – 7.5 dan suhu air 24 – 30°C. Menjaga kualitas air tetap bersih dan stabil akan mendukung pertumbuhan optimal dan memperkuat warna alami mereka.</p>
+          
+        <p><strong> Ideal untuk Akuarium Bernuansa Alami</strong><br>
+          Gurame Padang akan merasa lebih nyaman di akuarium yang dilengkapi dengan tanaman air, akar kayu, dan bebatuan sebagai tempat berlindung. Lingkungan seperti ini membantu mengurangi stres dan memungkinkan mereka menunjukkan perilaku alami serta warna terbaiknya.
+          Pencahayaan sedang hingga redup sangat dianjurkan untuk menonjolkan kilau warnanya.</p>
+
+        <p><strong>Pakan Fleksibel</strong><br>
+          Ikan ini bersifat omnivora dan tidak sulit dalam hal pemberian pakan. Mereka dengan mudah menerima pelet atau flake berkualitas tinggi sebagai makanan utama. Untuk variasi dan keseimbangan nutrisi, sesekali dapat diberikan pakan tambahan seperti sayuran rebus, serangga kecil, atau pakan beku seperti cacing darah, dalam jumlah yang wajar.</p>
+
+          <p><strong>Sempurna Untuk:</strong><br>
+          - Menjadi daya tarik utama di akuarium komunitas ukuran sedang–besar<br>
+          - Dekorasi hidup untuk ruang tamu, kantor, atau area publik<br>
+          - Hobiis dari pemula hingga mahir yang mencari ikan cantik, tenang, dan minim perawatan</p>
+          
+        <p><em>Jangan lewatkan permata cantik ini untuk akuarium Anda!</em></p>
+      </div>
+
+      <div class="btn-group">
+        <button onclick="addToCart(1, 'Ikan Gurame Padang', 35000)">Tambah ke Keranjang</button>
+        <button onclick="showProductDetail('Ikan Gurame Padang', document.getElementById('deskripsi-gurame-padang').innerHTML, 35000, 'text=product+2')">Lihat Detail</button>
+      </div>
+    </div>
+      
+      <div class="product-card">
+        <img src="images/Product 3.png" alt="Produk 3" />
+        <h3>Ikan Oscar</h3>
+        <p><strong>Rp 40.000 / ekor</strong></p>
+        <p>Ikan besar dengan warna putih krem dan bercak merah-oranye yang unik. Cerdas, interaktif, dan menjadi pusat perhatian di akuarium.</p>
+        
+      <!-- Deskripsi lengkap (disembunyikan, akan ditampilkan saat klik "Lihat Detail") -->
+      <div id="deskripsi-oscar" class="deskripsi-produk">
+        <p><strong>Deskripsi Detail:</strong><br>
+         Hadirkan pesona kuat dan interaksi memukau ke dalam akuarium Anda dengan koleksi "Ikan Oscar" dari kami! Ikan Oscar adalah salah satu spesies cichlid paling populer dan dicintai oleh para hobiis berkat kecerdasannya, kepribadiannya yang unik, dan penampilannya yang gagah. Mereka bukan hanya ikan peliharaan, melainkan teman akuatik yang akan berinteraksi dengan Anda, dengan sedikit sentuhan sifat predator yang menarik untuk diamati.</p>
+        
+        <p><strong>Detail Spesifikasi & Ciri Khas Unggulan:</strong></p>
+
+        <p><strong>Ukuran Gagah, Siap Menjadi Pusat Perhatian</strong></br>
+         <ul>
+          <li><strong>Ukuran Terkini:</strong> Tersedia dalam berbagai ukuran, umumnya mulai dari ±10–20 cm, cocok untuk mulai membangun interaksi dan mengamati pertumbuhannya.</li>
+          <li><strong>Potensi Maksimal:</strong> Jika dirawat dengan baik, Oscar bisa tumbuh hingga 25–35 cm, menjadikannya ikan besar yang tangguh dan tahan lama.</li>
+        </ul></p>
+
+        <p><strong>Gradasi Warna Eksotis dan Unik</strong><br>
+        <ul>
+          <li><strong>Warna Dasar:</strong>Tubuh dominan berwarna putih krem yang elegan hingga merah muda pucat, memberikan latar belakang yang menawan.</li>
+          <li><strong>Aksen Merah Menyala:</strong>Seluruh tubuh dihiasi dengan bercak-bercak tidak beraturan berwarna merah terang hingga oranye bata yang pekat. Pola bercak ini bervariasi pada setiap individu ikan, menciptakan corak yang unik dan artistik, menjadikan setiap Oscar istimewa.</li>
+          <li><strong>Mata Merah/Oranye:</strong> Mata mereka seringkali memiliki iris berwarna merah atau oranye yang cerah, menambah daya tarik visual yang kuat.</li>
+          <li><strong>Bentuk Tubuh Kokoh dan Berotot:</strong>Memiliki bentuk tubuh oval yang tebal dan padat, dengan sirip yang proporsional. Bentuk ini mencerminkan kekuatan dan kesehatan ikan, sekaligus memungkinkan mereka bergerak dengan anggun di dalam air.</li>
+        </ul></p>
+         
+        <p><strong>Temperamen Berkarakter & Interaktif dengan Sifat Predator</strong><br>
+         Ikan Neon Tetra dikenal sangat damai dan tidak agresif, cocok untuk akuarium komunitas. Nikmati tontonan saat mereka berenang bersama dalam formasi gerombolan yang rapat (schooling), tampilan alami yang indah dan menenangkan.</p>
+         Ikan Oscar dikenal memiliki kepribadian yang kuat dan cerdas. Mereka dapat mengenali pemiliknya, mengikuti gerakan Anda di luar akuarium, dan bahkan dapat dilatih untuk makan dari tangan!</p>
+         Sebagai predator oportunistik, mereka mungkin akan memangsa ikan yang jauh lebih kecil dari mereka. Oleh karena itu, penting untuk memilih teman akuarium yang berukuran serupa atau lebih besar, dan memiliki temperamen yang cocok.</p>
+         Sangat menyenangkan untuk diamati, terutama saat mencari makan, dan akan menjadi bintang utama di akuarium Anda.</p>
+       
+        <p><strong>Perawatan Mudah, Cocok untuk Segala Level Hobiis</strong><br>
+         Ikan Oscar ini sangat adaptif, namun membutuhkan volume air yang cukup dan kualitas air yang terjaga. Untuk memaksimalkan kesehatan dan menonjolkan warna cerahnya, disarankan menjaga kualitas air tetap bersih dan stabil dengan filtrasi yang kuat.</p>
+         Parameter Air Ideal: pH 6.0 - 7.5 dan suhu air antara 22-28°C (72-82°F).</p>
+        
+        <p><strong>Ideal untuk Lingkungan Akuarium Besar & Minimalis</strong><br>
+         Mereka akan merasa paling nyaman di akuarium yang luas dengan ruang berenang yang cukup. Dekorasi dapat berupa kayu apung besar, batu-batuan halus, atau substrat pasir. Hindari tanaman hidup yang rapuh karena mereka cenderung menggali.</p>
+
+        <p><strong>Pakan Fleksibel dan Rakus</strong><br>
+         Ikan Oscar adalah karnivora dan sangat mudah diberi makan. Mereka akan dengan senang hati menerima pelet ikan besar berkualitas tinggi yang diformulasikan khusus untuk cichlid. Untuk variasi nutrisi dan peningkatan warna, berikan sesekali pakan hidup/beku seperti udang, jangkrik, atau ikan kecil feeder fish (jika Anda ingin menstimulasi insting predatornya secara aman dan bertanggung jawab).</p>
+
+        <p><strong>Sempurna Untuk:</strong><br>
+         - Hobiis ikan yang mencari spesies dengan kepribadian kuat, interaktif, dan sisi predator yang menarik.<br>
+         - Akuarium berukuran besar yang membutuhkan ikan pusat perhatian yang gagah dan berkarakter.<br>
+         - Menciptakan ekosistem akuarium yang dinamis dan menarik dengan pemahaman akan sifat alaminya.</p>
+
+        <p><em>Jangan lewatkan kesempatan untuk menambahkan "Raja Predator Akuarium" ini ke dalam koleksi Anda!</em></p>
+      </div>
+
+      <div class="btn-group">
+        <button onclick="addToCart(1, 'Ikan Oscar', 40000)">Tambah ke Keranjang</button>
+        <button onclick="showProductDetail('Ikan Oscar', document.getElementById('deskripsi-oscar').innerHTML, 35000,)">Lihat Detail</button>
+      </div>
+    </div>
+
+        <div class="product-card">
+          <img src="images/Product 4.png" alt="Produk 4" />
+          <h3>Produk 4</h3>
+          <p><strong>Rp 250.000</strong></p>
+          <div class="btn-group">
+            <button onclick="addToCart(4, 'Produk 4', 250000)">Tambah ke Keranjang</button>
+            <button onclick="showProductDetail('Produk 4', 'Deskripsi lengkap produk 4.', 250000,)">Lihat Detail</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/250x200?text=Produk+5" alt="Produk 5" />
+          <h3>Produk 5</h3>
+          <p><strong>Rp 300.000</strong></p>
+          <div class="btn-group">
+            <button onclick="addToCart(5, 'Produk 5', 300000)">Tambah ke Keranjang</button>
+            <button onclick="showProductDetail('Produk 5', 'Deskripsi lengkap produk 5.', 300000, 'text=Produk+5')">Lihat Detail</button>
+          </div>
+        </div>
+      </div>
+      <button class="scroll-arrow scroll-right" data-scroll="1">&#10095;</button>
+    </div>
+  </section>
+
+  <section id="product-detail" class="section">
+    <div>
+      <img id="detail-image" src="" alt="Detail Produk" />
+      <h2 id="detail-title"></h2>
+      <p id="detail-description"></p>
+      <p id="detail-price"></p>
+      <button class="btn-back" data-section="products">Kembali ke Produk</button>
+    </div>
+  </section>
+
+  <section id="cart-section" class="section">
+    <h2>Keranjang Belanja</h2>
+    <div id="cart-items">
+      <!-- Isi keranjang akan ditampilkan oleh JavaScript -->
+    </div>
+    <p class="cart-total">
+      Total Barang: <span id="total-items">0</span> item
+    </p>
+    <p class="cart-total">
+      Total: <span id="cart-total">Rp 0</span>
+    </p>
+    <button id="wa-button">Pesan via WhatsApp</button>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Hubungi Kami</h2>
+    <form id="form-kontak">
+    <div class="form-group">
+      <label for="nama">Nama</label>
+      <input type="text" id="nama" name="nama" required />
+    </div>
+     <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+    <div class="form-group">
+      <label for="pesan">Pesan</label>
+      <textarea id="pesan" name="pesan" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn">Kirim</button>
+    <p id="status-kirim"></p>
+  </form>
+  </section>
+
+      <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>Email: support@tokoonline.com | Telp: 0812-3456-7890 | WhatsApp: <a href="https://wa.me/6283194479799" target="_blank">Chat Sekarang</a></p>
+      </div>
+      <script src="js/script.js"></script>
+      <div class="footer-copy">
+        &copy; 2025 Toko Online. Hak Cipta Dilindungi.
+      </div>
+    </footer>
+</body>
+</html>
